@@ -19,12 +19,11 @@ terraform {
   required_version = "~> 1.5"
 
   backend "s3" {
-    bucket         = "zero-to-prod-aws-eks-cicd-terraform-ugp-s3-bucket"
+    bucket         = "aws-eks-cicd-terraform-rashmi"
     key            = "eks/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "ap-south-1"
     encrypt        = true
     use_lockfile   = true
-    dynamodb_table = "zero-to-prod-aws-eks-cicd-terraform-ugp-dynamodb-table"
   }
 }
 
