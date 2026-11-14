@@ -15,12 +15,11 @@ terraform {
   # The S3 backend for this module's state file.
   # The 'key' now reflects the module's purpose.
   backend "s3" {
-    bucket         = "zero-to-prod-aws-eks-cicd-terraform-ugp-s3-bucket"
+    bucket         = "aws-eks-cicd-terraform-rashmi"
     key            = "vpc/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "ap-south-1"
     encrypt        = true
     use_lockfile   = true
-    dynamodb_table = "zero-to-prod-aws-eks-cicd-terraform-ugp-dynamodb-table"
   }
 }
 
