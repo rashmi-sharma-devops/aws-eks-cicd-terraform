@@ -9,7 +9,7 @@
 data "terraform_remote_state" "app_infra" {
   backend = "s3"
   config = {
-    bucket = "zero-to-prod-aws-eks-cicd-terraform-ugp-s3-bucket" # !! IMPORTANT: Replace with your actual S3 backend bucket !!
+    bucket = "aws-eks-cicd-terraform-rashmi" # !! IMPORTANT: Replace with your actual S3 backend bucket !!
     key    = "app-infra/terraform.tfstate"
     region = var.aws_region
   }
@@ -19,7 +19,7 @@ data "terraform_remote_state" "app_infra" {
 data "terraform_remote_state" "eks_cluster" {
   backend = "s3"
   config = {
-    bucket = "zero-to-prod-aws-eks-cicd-terraform-ugp-s3-bucket" # !! IMPORTANT: Replace with your actual S3 backend bucket !!
+    bucket = "aws-eks-cicd-terraform-rashmi" # !! IMPORTANT: Replace with your actual S3 backend bucket !!
     key    = "eks/terraform.tfstate"                             # Assuming EKS cluster state is stored here
     region = var.aws_region
   }
@@ -29,7 +29,7 @@ data "terraform_remote_state" "eks_cluster" {
 data "terraform_remote_state" "ecr_repo" {
   backend = "s3"
   config = {
-    bucket = "zero-to-prod-aws-eks-cicd-terraform-ugp-s3-bucket" # !! IMPORTANT: Replace with your actual S3 backend bucket !!
+    bucket = "aws-eks-cicd-terraform-rashmi" # !! IMPORTANT: Replace with your actual S3 backend bucket !!
     key    = "ecr/terraform.tfstate"                             # Assuming ECR state is stored here
     region = var.aws_region
   }

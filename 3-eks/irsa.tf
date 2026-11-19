@@ -56,7 +56,7 @@ resource "aws_iam_policy" "ugp_backend_policy" {
           "dynamodb:Query"
         ]
         # IMPORTANT: Restrict this to your specific DynamoDB table ARN
-        Resource = "arn:aws:dynamodb:us-east-1:064827688814:table/ugp-eks-cicd-messages-table"
+        Resource = "arn:aws:dynamodb:ap-south-1:064827688814:table/ugp-eks-cicd-messages-table"
       },
       # Permissions for Amazon Bedrock
       {

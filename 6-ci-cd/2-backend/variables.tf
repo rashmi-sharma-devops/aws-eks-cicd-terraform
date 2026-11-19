@@ -11,13 +11,13 @@ variable "project_name" {
 variable "aws_region" {
   description = "The AWS region to deploy resources into."
   type        = string
-  default     = "us-east-1" # Consistent with your frontend example
+  default     = "ap-south-1" # Consistent with your frontend example
 }
 
 variable "backend_full_repo_id" {
   description = "The full GitHub repository ID for the backend (e.g., 'username/repo-name')."
   type        = string
-  default     = "shivalkarrahul/zero-to-prod-aws-eks-cicd-backend-ugp"
+  default     = "rashmi-sharma-devops/aws-eks-cicd-backend"
 }
 
 variable "backend_repo_branch" {
@@ -49,5 +49,5 @@ variable "notification_email" {
   type        = string
   # A default value can be set for a test environment, but for a real-world
   # production setup, you should provide this value via a tfvars file.
-  default = "rahulshivalkar9665196@gmail.com"
+  default = "rashmisharma0264@gmail.com"
 }

@@ -9,7 +9,7 @@
 data "terraform_remote_state" "app_infra" {
   backend = "s3"
   config = {
-    bucket = "zero-to-prod-aws-eks-cicd-terraform-ugp-s3-bucket"
+    bucket = "aws-eks-cicd-terraform-rashmi"
     key    = "app-infra/terraform.tfstate"
     region = var.aws_region
   }
