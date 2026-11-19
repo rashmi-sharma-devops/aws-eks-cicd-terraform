@@ -18,9 +18,9 @@ resource "aws_s3_bucket" "frontend_ui" {
 data "terraform_remote_state" "eks_cluster" {
   backend = "s3"
   config = {
-    bucket = "zero-to-prod-aws-eks-cicd-terraform-ugp-s3-bucket" # The bucket where '03-eks' stores its state
+    bucket = "aws-eks-cicd-terraform-rashmi" # The bucket where '03-eks' stores its state
     key    = "eks/terraform.tfstate"                             # The exact key of the '03-eks' state file
-    region = "us-east-1"
+    region = "ap-south-1"
   }
 }
 
